@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import { defineCommand, runMain } from "citty";
 import { createCommand } from "./commands/create.js";
 import { listCommand } from "./commands/list.js";

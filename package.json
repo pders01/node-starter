@@ -4,7 +4,7 @@
   "description": "A scaffolding CLI for generating projects from preferred stack configurations",
   "type": "module",
   "bin": {
-    "node-starter": "./dist/index.js"
+    "node-starter": "./src/index.ts"
   },
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --external giget --external ejs",
