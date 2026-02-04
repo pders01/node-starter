@@ -5,7 +5,17 @@ A scaffolding CLI for generating projects from preferred stack configurations.
 ## Installation
 
 ```bash
+# Run directly from GitHub (no install needed)
+bunx github:pders01/node-starter create my-app
+
+# Or clone and link globally
+git clone https://github.com/pders01/node-starter.git
+cd node-starter
 bun install
+bun link
+
+# Then use from anywhere
+node-starter create my-app
 ```
 
 ## Usage
@@ -13,35 +23,35 @@ bun install
 ### Interactive mode
 
 ```bash
-npx node-starter create
+node-starter create
 ```
 
 ### Flag mode
 
 ```bash
 # CLI project
-npx node-starter create my-app --type cli
+node-starter create my-app --type cli
 
 # Frontend + BFF with Vue and Hono
-npx node-starter create my-app --type frontend-bff --framework vue
+node-starter create my-app --type frontend-bff --framework vue
 
 # Frontend + BFF with SolidJS, Elysia, and daisyUI
-npx node-starter create my-app --type frontend-bff --framework solid --server elysia --ui daisyui
+node-starter create my-app --type frontend-bff --framework solid --server elysia --ui daisyui
 
 # Complex frontend + BFF (uses Rsbuild instead of Vite)
-npx node-starter create my-app --type frontend-bff --framework vue --complexity complex
+node-starter create my-app --type frontend-bff --framework vue --complexity complex
 
 # TUI project (uses bun create tui)
-npx node-starter create my-app --type tui
+node-starter create my-app --type tui
 
 # Remote template
-npx node-starter create my-app --from github:user/repo
+node-starter create my-app --from github:user/repo
 ```
 
 ### List available templates
 
 ```bash
-npx node-starter list
+node-starter list
 ```
 
 ## Template Types

@@ -28,11 +28,11 @@ export const listCommand = defineCommand({
     }
 
     console.log("\x1b[1mUsage Examples\x1b[0m\n");
-    console.log("  \x1b[90m$\x1b[0m npx node-starter create my-app --type cli");
-    console.log("  \x1b[90m$\x1b[0m npx node-starter create my-app --type frontend-bff --framework vue");
-    console.log("  \x1b[90m$\x1b[0m npx node-starter create my-app --type frontend-bff --framework solid --server elysia");
-    console.log("  \x1b[90m$\x1b[0m npx node-starter create my-app --type tui");
-    console.log("  \x1b[90m$\x1b[0m npx node-starter create my-app --from github:user/repo");
+    console.log("  \x1b[90m$\x1b[0m node-starter create my-app --type cli");
+    console.log("  \x1b[90m$\x1b[0m node-starter create my-app --type frontend-bff --framework vue");
+    console.log("  \x1b[90m$\x1b[0m node-starter create my-app --type frontend-bff --framework solid --server elysia");
+    console.log("  \x1b[90m$\x1b[0m node-starter create my-app --type tui");
+    console.log("  \x1b[90m$\x1b[0m node-starter create my-app --from github:user/repo");
     console.log("");
   },
 });
