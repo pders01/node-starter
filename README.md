@@ -152,6 +152,19 @@ node-starter/
 
 This approach minimizes maintenance by leveraging official scaffolders while adding project-specific configurations on top.
 
+## Troubleshooting
+
+### `bunx github:` fails with "could not determine executable"
+
+This is a [known bun caching issue](https://github.com/oven-sh/bun/issues/9178). Try clearing the cache:
+
+```bash
+bun pm cache rm
+bunx github:pders01/node-starter create my-app
+```
+
+If it persists, use the clone+link approach instead.
+
 ## License
 
 MIT
