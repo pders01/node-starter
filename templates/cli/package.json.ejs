@@ -1,0 +1,25 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.1.0",
+  "description": "A CLI application",
+  "type": "module",
+  "bin": {
+    "<%= projectName %>": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts"
+  },
+  "keywords": ["cli"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "citty": "^0.1.6",
+    "consola": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "typescript": "^5.7.2"
+  }
+}

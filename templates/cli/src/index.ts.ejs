@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+import { defineCommand, runMain } from "citty";
+import consola from "consola";
+
+const main = defineCommand({
+  meta: {
+    name: "<%= projectName %>",
+    version: "0.1.0",
+    description: "A CLI application",
+  },
+  args: {
+    name: {
+      type: "positional",
+      description: "Your name",
+      required: false,
+    },
+    greeting: {
+      type: "string",
+      description: "Custom greeting",
+      alias: "g",
+      default: "Hello",
+    },
+  },
+  run({ args }) {
+    const name = args.name || "World";
+    consola.success(`${args.greeting}, ${name}!`);
+  },
+});
+
+runMain(main);

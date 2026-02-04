@@ -1,0 +1,15 @@
+import { Elysia } from "elysia";
+import { cors } from "@elysiajs/cors";
+
+const app = new Elysia()
+  .use(cors())
+  .get("/api/health", () => ({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+  }))
+  .get("/api/hello", ({ query }) => ({
+    message: `Hello, ${query.name || "World"}!`,
+  }))
+  .listen(3001);
+
+console.log("<%= projectName %> BFF server running on http://localhost:3001");

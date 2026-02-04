@@ -1,0 +1,24 @@
+import { createApp, createRouter, defineEventHandler, getQuery } from "h3";
+
+const app = createApp();
+const router = createRouter();
+
+router.get("/api/health", defineEventHandler(() => ({
+  status: "ok",
+  timestamp: new Date().toISOString(),
+})));
+
+router.get("/api/hello", defineEventHandler((event) => {
+  const query = getQuery(event);
+  const name = query.name || "World";
+  return { message: `Hello, ${name}!` };
+}));
+
+app.use(router);
+
+export default {
+  port: 3001,
+  fetch: app.fetch,
+};
+
+console.log("<%= projectName %> BFF server running on http://localhost:3001");
